@@ -6,14 +6,14 @@ import Choices from './components/Choices/Choices';
 import Buttons from './components/Buttons/Buttons';
 
 function App() {
-  const [choices, setChoices] = useState(["Rock", "Paper", "Scissors"]);
+  const [choices] = useState(["Rock", "Paper", "Scissors"]);
   const [choice, setChoice] = useState("");
   const [human, setHuman] = useState("");
   const [aiScore, setAiScore] = useState(0);
   const [humanScore, setHumanScore] = useState(0);
-  const [re, setRe] = useState(['You Won', 'Ai Won', 'Draw']);
+  const [re] = useState(['You Won', 'Ai Won', 'Draw']);
   const [winner, setWinner] = useState("");
-
+  
   const AI = () => {
     
     
@@ -35,7 +35,7 @@ function App() {
        setHumanScore((prev) => prev);
        setAiScore((prev) => prev);
      }
-  }, [winner])
+  }, [winner, re])
     useEffect(() => {
       if (humanScore === 10) {
         alert(`Congrats You beat me ${humanScore} - ${aiScore} 😢`);

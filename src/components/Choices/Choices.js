@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './Choices.css'
 function Choices({ choice, human, setWinner, re, winner }) {
   
